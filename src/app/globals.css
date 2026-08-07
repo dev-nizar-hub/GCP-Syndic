@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-sans text-gcp-dark antialiased;
+}
+
+/* Smooth dropdown transitions */
+.dropdown-enter { opacity: 0; transform: translateY(-8px); }
+.dropdown-enter-active { opacity: 1; transform: translateY(0); transition: all 200ms ease; }
