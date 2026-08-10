@@ -211,6 +211,200 @@ var HTTP_GET_VARS = [];
 </style>
 <link rel='stylesheet' id='jquery-theme-css' href='/assets/wp-content/plugins/formidable-pro/css/ui-lightness/jquery-ui.css' media='all' />
 
+<style id="gcp-cards-style">
+/* ===== HIDE METADATA JUNK ===== */
+/* Hide the post type/date text that leaks before the page title */
+.fusion-tb-header ~ div > .fusion-wrapper > div > .fusion-fullwidth:first-of-type,
+.fusion-page-title-bar, .fusion-breadcrumbs, .fusion-title-bar,
+.post-edit-link, .vcard, .fusion-meta, .rich-snippet-hidden { display: none !important; }
+/* The psamwp / date text comes from .fusion-post-title-bar or entry meta */
+.fusion-post-title-bar, .entry-meta, .entry-header .vcard,
+.entry-header time, .fusion-date-and-formats { display: none !important; }
+/* Hide any raw text nodes that appear before #boxed-wrapper content */
+body > .fusion-tb-header ~ script + div a.skip-link { display: none !important; }
+
+/* ===== PAGE LAYOUT ===== */
+#boxed-wrapper, #wrapper.fusion-wrapper { overflow: visible !important; }
+.fusion-fullwidth { box-sizing: border-box; }
+body, #wrapper, #main, .fusion-body { background-color: #f8fafc !important; }
+
+/* Force the main row to center itself and override its negative margins */
+.fusion-fullwidth:has(#frm_form_41_container) > .fusion-builder-row {
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* ===== PAGE CONTENT AREA ===== */
+.fusion-builder-column-11 .fusion-text {
+  padding: 0 40px;
+}
+@media (max-width: 768px) {
+  .fusion-builder-column-11 .fusion-text { padding: 0 16px; }
+}
+
+/* ===== PAGE TITLE SECTION ===== */
+.fusion-fullwidth:has(#frm_form_41_container) {
+  padding: 60px 0 20px !important;
+}
+/* Specifically target the title column and form column */
+.fusion-builder-column-9, .fusion-builder-column-10 {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+.frm_forms {
+  width: 100% !important;
+  max-width: 900px !important;
+}
+/* Page title */
+.fusion-fullwidth:has(#frm_form_41_container) h1,
+.fusion-fullwidth:has(#frm_form_41_container) h2 {
+  font-size: 34px !important;
+  font-weight: 800 !important;
+  color: #0a2631 !important;
+  margin-bottom: 32px !important;
+  font-family: 'Raleway','Poppins',sans-serif !important;
+  text-align: center !important;
+}
+
+/* ===== FILTER BAR ===== */
+.frm_pro_form { width: 100%; }
+.frm_pro_form .frm_fields_container { 
+  display: flex !important; 
+  flex-wrap: wrap; 
+  gap: 16px; 
+  align-items: flex-end; 
+  justify-content: center;
+}
+.frm_fields_container > input[type="hidden"] { display: none !important; }
+/* Each field container */
+.frm_form_field.frm_fourth {
+  flex: 1 !important;
+  min-width: 180px !important;
+  max-width: 260px !important;
+  width: auto !important;
+}
+/* Labels */
+.frm_primary_label {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  color: #5a7490 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  margin-bottom: 8px !important;
+  display: block !important;
+}
+/* Select dropdowns */
+.frm_pro_form select, .frm_pro_form .auto_width {
+  width: 100% !important;
+  padding: 12px 16px !important;
+  border: 1.5px solid #d1dce8 !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  color: #0a2631 !important;
+  background: #fff url('data:image/svg+xml;utf8,<svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="%230a2631" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat right 16px center !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  outline: none !important;
+  transition: border-color .2s, box-shadow .2s !important;
+  box-shadow: 0 2px 8px rgba(10,38,49,.03) !important;
+}
+.frm_pro_form select:focus {
+  border-color: #317bff !important;
+  box-shadow: 0 0 0 4px rgba(49,123,255,.12) !important;
+}
+/* Valider button */
+.frm_button_submit {
+  background: #317bff !important;
+  color: #fff !important;
+  border: none !important;
+  padding: 13px 32px !important;
+  border-radius: 8px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  cursor: pointer !important;
+  letter-spacing: .3px !important;
+  transition: background .2s, transform .1s !important;
+  white-space: nowrap !important;
+  box-shadow: 0 4px 12px rgba(49,123,255,.2) !important;
+  height: 47px !important;
+}
+.frm_button_submit:hover { 
+  background: #1a56cc !important; 
+  transform: translateY(-1px) !important;
+}
+/* Submit container alignment */
+.frm_submit { margin: 0 !important; flex: 0 0 auto !important; }
+
+/* ===== PROPERTY CARD GRID ===== */
+#z_autres_annonces {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr 1fr !important;
+  gap: 24px !important;
+  padding: 48px 40px 72px !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+}
+#z_autres_annonces > .fusion-layout-column {
+  width: 100% !important;
+  margin-right: 0 !important;
+  background: #ffffff !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 18px rgba(10,38,49,.09) !important;
+  border: 1px solid #e8edf4 !important;
+  transition: transform 0.22s ease, box-shadow 0.22s ease !important;
+  cursor: pointer !important;
+  min-width: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+#z_autres_annonces > .fusion-layout-column:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 10px 36px rgba(10,38,49,.16) !important;
+}
+#z_autres_annonces .fusion-imageframe img {
+  width: 100% !important;
+  height: 185px !important;
+  object-fit: cover !important;
+  display: block !important;
+  border-radius: 0 !important;
+}
+#z_autres_annonces .imageframe-align-center { text-align: left !important; }
+#z_autres_annonces .fusion-image-element { overflow: hidden !important; }
+#z_autres_annonces .resume { padding: 14px 16px 18px !important; flex: 1 !important; }
+#z_autres_annonces .resume > p { margin: 0 !important; }
+#z_autres_annonces .type_bien {
+  display: inline-block !important;
+  background: #e8f0fe !important;
+  color: #317bff !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: .5px !important;
+  text-transform: uppercase !important;
+  padding: 3px 10px !important;
+  border-radius: 20px !important;
+  margin-bottom: 7px !important;
+}
+#z_autres_annonces .lieu {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #0a2631 !important;
+  margin-bottom: 5px !important;
+}
+#z_autres_annonces .surface_nbp { font-size: 12px !important; color: #8a9bb0 !important; }
+#z_autres_annonces .fusion-column-wrapper { box-shadow: none !important; }
+#z_autres_annonces .fusion-column-inner-bg { display: none !important; }
+.fusion-builder-column-11 { background: #f0f4f8 !important; }
+@media (max-width: 960px) {
+  #z_autres_annonces { grid-template-columns: 1fr 1fr !important; padding: 24px !important; }
+}
+@media (max-width: 600px) {
+  #z_autres_annonces { grid-template-columns: 1fr !important; padding: 16px !important; }
+}
+</style>
 </head>
 
 <body class="wp-singular page-template page-template-100-width page-template-100-width-php page page-id-18242 page-child parent-pageid-18116 wp-theme-Avada wp-child-theme-tps visitor fusion-image-hovers fusion-pagination-sizing fusion-button_type-flat fusion-button_span-no fusion-button_gradient-linear avada-image-rollover-circle-yes avada-image-rollover-no fusion-body ltr fusion-sticky-header no-tablet-sticky-header no-mobile-slidingbar no-mobile-totop avada-has-rev-slider-styles fusion-disable-outline fusion-sub-menu-fade mobile-logo-pos-left layout-wide-mode avada-has-boxed-modal-shadow-none layout-scroll-offset-full avada-has-zero-margin-offset-top fusion-top-header menu-text-align-center mobile-menu-design-flyout fusion-show-pagination-text fusion-header-layout-v1 avada-responsive avada-footer-fx-none avada-menu-highlight-style-background fusion-search-form-clean fusion-main-menu-search-dropdown fusion-avatar-square avada-sticky-shrinkage avada-dropdown-styles avada-blog-layout-large avada-blog-archive-layout-large avada-header-shadow-no avada-menu-icon-position-left avada-has-megamenu-shadow avada-has-mainmenu-dropdown-divider avada-has-header-100-width avada-has-main-nav-search-icon avada-has-breadcrumb-mobile-hidden avada-has-titlebar-hide avada-has-slidingbar-widgets avada-has-slidingbar-position-right avada-slidingbar-toggle-style-circle avada-has-pagination-padding avada-flyout-menu-direction-fade avada-ec-views-v1" data-awb-post-id="18242">
@@ -464,14 +658,14 @@ sur-mesure</p>
 <input type="hidden" name="item_meta[0]" value="" />
 <input type="hidden" id="frm_submit_entry_41" name="frm_submit_entry_41" value="a6959d10ef" /><input type="hidden" name="_wp_http_referer" value="/nos-biens/location/" /><div id="frm_field_565_container" class="frm_form_field form-field  frm_top_container frm_first frm_fourth">
 
-    <label for="field_y68yjd28fa6c124" id="field_y68yjd28fa6c124_label" class="frm_primary_label">Localisation
+    <label for="field_y68yjd28fa6c124" id="field_y68yjd28fa6c124_label" class="frm_primary_label">Ville
 
         <span class="frm_required"></span>
 
     </label>
 
-    		<select name="item_meta[565]" id="field_y68yjd28fa6c124"  data-invmsg="Localisation est non valide" class="auto_width" aria-invalid="false"  >
-		<option  value="" selected='selected'> </option><option  value="Meknès">Meknès</option><option  value="Casablanca">Casablanca</option><option  value="Rabat">Rabat</option><option  value="Marrakech">Marrakech</option><option  value="Agadir">Agadir</option><option  value="Tanger">Tanger</option><option  value="Fès">Fès</option><option  value="Oujda">Oujda</option><option  value="Kénitra">Kénitra</option><option  value="Salé">Salé</option><option  value="Témara">Témara</option><option  value="Mohammedia">Mohammedia</option><option  value="Settat">Settat</option><option  value="El Jadida">El Jadida</option><option  value="Béni Mellal">Béni Mellal</option><option  value="Tétouan">Tétouan</option>	</select>
+    		<select name="item_meta[565]" id="field_y68yjd28fa6c124"  data-invmsg="Ville est non valide" class="auto_width" aria-invalid="false"  >
+		<option  value="" selected='selected'> </option><option  value="Meknès">Meknès</option><option  value="Fès">Fès</option><option  value="Rabat">Rabat</option><option  value="Casablanca">Casablanca</option><option  value="Marrakech">Marrakech</option><option  value="Tanger">Tanger</option><option  value="Agadir">Agadir</option><option  value="Kénitra">Kénitra</option><option  value="Oujda">Oujda</option><option  value="El Jadida">El Jadida</option><option  value="Ifrane">Ifrane</option><option  value="Mohammedia">Mohammedia</option>	</select>
 	
 
     
@@ -488,7 +682,7 @@ sur-mesure</p>
     </label>
 
     		<select name="item_meta[566]" id="field_um9ky312b5b1117"  data-invmsg="Type de bien est non valide" class="auto_width" aria-invalid="false"  >
-		<option  value="" selected='selected'> </option><option  value="Meknès">Meknès</option><option  value="Casablanca">Casablanca</option><option  value="Rabat">Rabat</option><option  value="Marrakech">Marrakech</option><option  value="Agadir">Agadir</option><option  value="Tanger">Tanger</option><option  value="Fès">Fès</option><option  value="Oujda">Oujda</option><option  value="Kénitra">Kénitra</option><option  value="Salé">Salé</option><option  value="Témara">Témara</option><option  value="Mohammedia">Mohammedia</option><option  value="Settat">Settat</option><option  value="El Jadida">El Jadida</option><option  value="Béni Mellal">Béni Mellal</option><option  value="Tétouan">Tétouan</option>	</select>
+		<option  value="" selected='selected'> </option><option  value="Appartement">Appartement</option><option  value="Villa">Villa</option><option  value="Maison">Maison</option><option  value="Studio">Studio</option><option  value="Duplex">Duplex</option><option  value="Triplex">Triplex</option><option  value="Riad">Riad</option><option  value="Penthouse">Penthouse</option><option  value="Maison mitoyenne">Maison mitoyenne</option><option  value="Ferme">Ferme</option><option  value="Terrain">Terrain</option><option  value="Bureau">Bureau</option><option  value="Local commercial">Local commercial</option>	</select>
 	
 
     
@@ -505,7 +699,7 @@ sur-mesure</p>
     </label>
 
     		<select name="item_meta[570]" id="field_71h9w"  data-invmsg="Nombre de pièces est non valide" class="auto_width" aria-invalid="false"  >
-		<option  value="" selected='selected'> </option><option  value="Meknès">Meknès</option><option  value="Casablanca">Casablanca</option><option  value="Rabat">Rabat</option><option  value="Marrakech">Marrakech</option><option  value="Agadir">Agadir</option><option  value="Tanger">Tanger</option><option  value="Fès">Fès</option><option  value="Oujda">Oujda</option><option  value="Kénitra">Kénitra</option><option  value="Salé">Salé</option><option  value="Témara">Témara</option><option  value="Mohammedia">Mohammedia</option><option  value="Settat">Settat</option><option  value="El Jadida">El Jadida</option><option  value="Béni Mellal">Béni Mellal</option><option  value="Tétouan">Tétouan</option>	</select>
+		<option  value="" selected='selected'> </option><option  value="1 pièce">1 pièce</option><option  value="2 pièces">2 pièces</option><option  value="3 pièces">3 pièces</option><option  value="4 pièces">4 pièces</option><option  value="5 pièces">5 pièces</option><option  value="6 pièces">6 pièces</option><option  value="7 pièces et +">7 pièces et +</option><option  value="Indifférent">Indifférent</option>	</select>
 	
 
     
@@ -1658,261 +1852,6 @@ else{__FRMRULES=jQuery.extend({},__FRMRULES,frmrules);}var frmHide=["submit_22",
     </div>
   </div>
 </div>
-<style id="gcp-filter-style">
-#gcp-results-area{max-width:1200px;margin:0 auto;padding:30px 20px 60px}
-/* Fix select borders that got wiped */
-.frm_pro_form select { border: 1px solid #c8d4e0 !important; border-radius: 6px !important; padding: 10px !important; background: #fff !important; }
-.frm_pro_form .frm_button_submit { background: #317bff !important; color: #fff !important; border-radius: 6px !important; border: none !important; padding: 10px 24px !important; }
-/* Completely hide old properties */
-.fusion-builder-column-11 { display: none !important; }
-/* Hide rich snippet text that leaked */
-.rich-snippet-hidden { display: none !important; }
 
-.gcp-results-title{font-family:'Raleway','Poppins',sans-serif;font-size:20px;font-weight:700;color:#0a2631;margin-bottom:6px}
-.gcp-results-sub{font-size:13px;color:#8a9bb0;margin-bottom:20px}
-.gcp-results-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:24px}
-.gcp-prop-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 14px rgba(10,38,49,.08);cursor:pointer;transition:transform .22s,box-shadow .22s;border:1px solid #e8edf4}
-.gcp-prop-card:hover{transform:translateY(-5px);box-shadow:0 10px 32px rgba(10,38,49,.16)}
-.gcp-prop-card img{width:100%;height:200px;object-fit:cover;display:block}
-.gcp-prop-body{padding:16px 18px 18px}
-.gcp-prop-city{font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:#8a9bb0;margin-bottom:4px}
-.gcp-prop-badge{display:inline-block;background:#e8f0fe;color:#317bff;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:3px 10px;border-radius:20px;margin-bottom:8px}
-.gcp-prop-title{font-family:'Raleway','Poppins',sans-serif;font-weight:700;font-size:15px;color:#0a2631;margin-bottom:5px;line-height:1.35}
-.gcp-prop-meta{font-size:12px;color:#8a9bb0;margin-bottom:10px}
-.gcp-prop-price{font-family:'Raleway','Poppins',sans-serif;font-size:17px;font-weight:800;color:#317bff;margin-bottom:14px}
-.gcp-prop-btn{display:block;width:100%;background:#317bff;color:#fff;border:none;padding:11px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;text-align:center;transition:background .2s;font-family:'Raleway','Poppins',sans-serif;text-transform:uppercase;letter-spacing:.5px}
-.gcp-prop-btn:hover{background:#1a56cc}
-.gcp-coming-soon{text-align:center;padding:70px 20px;background:linear-gradient(135deg,#f0f5ff,#e8edf9);border-radius:16px;margin:30px 0}
-.gcp-coming-soon .cs-emoji{font-size:64px;margin-bottom:18px}
-.gcp-coming-soon h3{font-family:'Raleway','Poppins',sans-serif;font-size:24px;font-weight:800;color:#0a2631;margin-bottom:10px}
-.gcp-coming-soon p{color:#8a9bb0;font-size:15px;max-width:420px;margin:0 auto 20px;line-height:1.7}
-.gcp-notify-btn{display:inline-block;background:#317bff;color:#fff;padding:12px 28px;border-radius:8px;font-weight:700;font-size:13px;cursor:pointer;border:none;font-family:inherit;transition:background .2s}
-.gcp-notify-btn:hover{background:#1a56cc}
-.gcp-no-results{text-align:center;padding:50px 20px}
-.gcp-no-results h3{font-size:18px;font-weight:700;color:#0a2631;margin-bottom:8px}
-.gcp-no-results p{color:#8a9bb0;font-size:14px}
-/* City section label */
-.gcp-city-section{margin-bottom:40px}
-.gcp-city-label{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid #e8edf4}
-.gcp-city-label h3{font-family:'Raleway','Poppins',sans-serif;font-size:16px;font-weight:700;color:#0a2631;margin:0}
-.gcp-city-label span{font-size:12px;color:#8a9bb0}
-/* Modal */
-.gcp-overlay{display:none;position:fixed;inset:0;background:rgba(10,38,49,.6);z-index:999999;align-items:center;justify-content:center;padding:20px}
-.gcp-overlay.open{display:flex}
-.gcp-modal{background:#fff;border-radius:16px;max-width:500px;width:100%;overflow:hidden;box-shadow:0 24px 64px rgba(10,38,49,.28);animation:gcp-up .28s ease}
-@keyframes gcp-up{from{transform:translateY(28px);opacity:0}to{transform:translateY(0);opacity:1}}
-.gcp-modal-hdr{background:linear-gradient(135deg,#0a2631,#1a3d4f);color:#fff;padding:22px 24px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
-.gcp-modal-hdr h3{margin:0;font-family:'Raleway','Poppins',sans-serif;font-size:17px;font-weight:700;line-height:1.3}
-.gcp-modal-hdr p{margin:4px 0 0;font-size:12px;color:#90b8cc}
-.gcp-x{background:rgba(255,255,255,.15);border:none;color:#fff;width:30px;height:30px;border-radius:50%;font-size:16px;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:background .2s}
-.gcp-x:hover{background:rgba(255,255,255,.3)}
-.gcp-modal-prop{background:#f5f8ff;padding:14px 24px;display:flex;gap:14px;align-items:center;border-bottom:1px solid #e8edf4}
-.gcp-modal-prop img{width:78px;height:58px;object-fit:cover;border-radius:8px;flex-shrink:0}
-.gcp-modal-prop .mtype{font-size:10px;font-weight:700;text-transform:uppercase;color:#317bff;letter-spacing:.5px}
-.gcp-modal-prop .mtitle{font-size:13px;font-weight:700;color:#0a2631;margin:2px 0}
-.gcp-modal-prop .mprice{font-size:14px;font-weight:800;color:#317bff}
-.gcp-modal-body{padding:22px 24px}
-.gcp-modal-body h4{margin:0 0 16px;font-size:13px;font-weight:700;color:#0a2631}
-.gcp-f{margin-bottom:13px}
-.gcp-f label{display:block;font-size:11px;font-weight:700;color:#5a7490;margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px}
-.gcp-f input{width:100%;padding:11px 14px;border:1.5px solid #d1dce8;border-radius:8px;font-size:14px;color:#0a2631;background:#f8fafc;outline:none;transition:border-color .2s,box-shadow .2s;font-family:inherit;box-sizing:border-box}
-.gcp-f input:focus{border-color:#317bff;box-shadow:0 0 0 3px rgba(49,123,255,.12);background:#fff}
-.gcp-wa-btn{width:100%;padding:14px;background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:opacity .2s;font-family:inherit;margin-top:6px}
-.gcp-wa-btn:hover{opacity:.9}
-</style>
-<div id="gcp-results-area"></div>
-<div class="gcp-overlay" id="gcp-overlay">
-  <div class="gcp-modal" id="gcp-modal">
-    <div class="gcp-modal-hdr">
-      <div><h3>Demande d'information</h3><p id="gcp-m-sub"></p></div>
-      <button class="gcp-x" onclick="gcpCloseModal()">&#x2715;</button>
-    </div>
-    <div class="gcp-modal-prop">
-      <img id="gcp-m-img" src="" alt="">
-      <div>
-        <div class="mtype" id="gcp-m-type"></div>
-        <div class="mtitle" id="gcp-m-name"></div>
-        <div class="mprice" id="gcp-m-price"></div>
-      </div>
-    </div>
-    <div class="gcp-modal-body">
-      <h4>Remplissez vos coordonnees pour etre contacte :</h4>
-      <div class="gcp-f"><label>Nom complet *</label><input id="gcp-nom" type="text" placeholder="Votre nom et prenom" required></div>
-      <div class="gcp-f"><label>Telephone / WhatsApp *</label><input id="gcp-tel" type="tel" placeholder="+212 6XX XXX XXX" required></div>
-      <div class="gcp-f"><label>Email (optionnel)</label><input id="gcp-email" type="email" placeholder="votre@email.com"></div>
-      <button class="gcp-wa-btn" onclick="gcpSendWA()">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        Envoyer via WhatsApp
-      </button>
-    </div>
-  </div>
-</div><script>
-(function(){
-  var PROPS   = {"Meknès": [{"id": "mk1", "type": "Appartement", "titre": "Appartement 3 pièces - Hamria", "pieces": 3, "surface": 85, "quartier": "Hamria", "prix_achat": "750 000 MAD", "prix_location": "4 500 MAD/mois", "img": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=480&q=80"}, {"id": "mk2", "type": "Villa", "titre": "Villa standing 5 pièces - Haut Agdal", "pieces": 5, "surface": 220, "quartier": "Haut Agdal", "prix_achat": "2 200 000 MAD", "prix_location": "15 000 MAD/mois", "img": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=480&q=80"}, {"id": "mk3", "type": "Studio", "titre": "Studio moderne centre-ville", "pieces": 1, "surface": 38, "quartier": "Centre-ville", "prix_achat": "380 000 MAD", "prix_location": "2 800 MAD/mois", "img": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=480&q=80"}, {"id": "mk4", "type": "Maison", "titre": "Maison familiale 4 pièces - Hay Salam", "pieces": 4, "surface": 140, "quartier": "Hay Salam", "prix_achat": "1 100 000 MAD", "prix_location": "7 000 MAD/mois", "img": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=480&q=80"}, {"id": "mk5", "type": "Appartement", "titre": "Appartement résidence sécurisée Al Menzeh", "pieces": 2, "surface": 65, "quartier": "Al Menzeh", "prix_achat": "580 000 MAD", "prix_location": "3 500 MAD/mois", "img": "https://images.unsplash.com/photo-1560184897-ae75f418493e?w=480&q=80"}, {"id": "mk6", "type": "Riad", "titre": "Riad authentique en Médina", "pieces": 6, "surface": 280, "quartier": "Médina", "prix_achat": "1 800 000 MAD", "prix_location": "12 000 MAD/mois", "img": "https://images.unsplash.com/photo-1577493340887-b7bfff550145?w=480&q=80"}, {"id": "mk7", "type": "Duplex", "titre": "Duplex moderne 3 pièces - Hay Salam", "pieces": 3, "surface": 110, "quartier": "Hay Salam", "prix_achat": "950 000 MAD", "prix_location": "6 000 MAD/mois", "img": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=480&q=80"}, {"id": "mk8", "type": "Terrain", "titre": "Terrain constructible 500m² - Route Ifrane", "pieces": 0, "surface": 500, "quartier": "Route d'Ifrane", "prix_achat": "650 000 MAD", "prix_location": "N/A", "img": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=480&q=80"}], "Kénitra": [{"id": "kn1", "type": "Appartement", "titre": "Appartement 2 pièces - Cité Bassatine", "pieces": 2, "surface": 65, "quartier": "Cité Bassatine", "prix_achat": "620 000 MAD", "prix_location": "3 800 MAD/mois", "img": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=480&q=80"}, {"id": "kn2", "type": "Villa", "titre": "Villa 4 pièces - Quartier Administratif", "pieces": 4, "surface": 190, "quartier": "Quartier Administratif", "prix_achat": "1 900 000 MAD", "prix_location": "13 000 MAD/mois", "img": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=480&q=80"}, {"id": "kn3", "type": "Studio", "titre": "Studio centre-ville Kénitra", "pieces": 1, "surface": 32, "quartier": "Centre-ville", "prix_achat": "350 000 MAD", "prix_location": "2 500 MAD/mois", "img": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=480&q=80"}, {"id": "kn4", "type": "Duplex", "titre": "Duplex Résidence Oued Sebou", "pieces": 3, "surface": 110, "quartier": "Oued Sebou", "prix_achat": "980 000 MAD", "prix_location": "6 000 MAD/mois", "img": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=480&q=80"}, {"id": "kn5", "type": "Appartement", "titre": "Grand appartement lumineux 3 pièces", "pieces": 3, "surface": 88, "quartier": "Quartier Hassan", "prix_achat": "720 000 MAD", "prix_location": "4 200 MAD/mois", "img": "https://images.unsplash.com/photo-1560184897-ae75f418493e?w=480&q=80"}, {"id": "kn6", "type": "Maison", "titre": "Maison avec jardin 4 pièces", "pieces": 4, "surface": 150, "quartier": "Hay Bitat", "prix_achat": "1 100 000 MAD", "prix_location": "7 500 MAD/mois", "img": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=480&q=80"}], "Tanger": [{"id": "tg1", "type": "Appartement", "titre": "Appartement vue mer - Malabata", "pieces": 3, "surface": 95, "quartier": "Malabata", "prix_achat": "950 000 MAD", "prix_location": "6 000 MAD/mois", "img": "https://images.unsplash.com/photo-1560184897-ae75f418493e?w=480&q=80"}, {"id": "tg2", "type": "Villa", "titre": "Villa luxe 5 pièces - California", "pieces": 5, "surface": 280, "quartier": "California", "prix_achat": "3 500 000 MAD", "prix_location": "22 000 MAD/mois", "img": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=480&q=80"}, {"id": "tg3", "type": "Riad", "titre": "Riad Médina de Tanger 6 pièces", "pieces": 6, "surface": 320, "quartier": "Médina", "prix_achat": "2 200 000 MAD", "prix_location": "15 000 MAD/mois", "img": "https://images.unsplash.com/photo-1577493340887-b7bfff550145?w=480&q=80"}, {"id": "tg4", "type": "Studio", "titre": "Studio vue mer - Bou Khalf", "pieces": 1, "surface": 40, "quartier": "Bou Khalf", "prix_achat": "420 000 MAD", "prix_location": "3 200 MAD/mois", "img": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=480&q=80"}, {"id": "tg5", "type": "Penthouse", "titre": "Penthouse front de mer 4 pièces", "pieces": 4, "surface": 160, "quartier": "Front de mer", "prix_achat": "2 800 000 MAD", "prix_location": "18 000 MAD/mois", "img": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=480&q=80"}, {"id": "tg6", "type": "Appartement", "titre": "Appartement moderne 2 pièces - Centre", "pieces": 2, "surface": 72, "quartier": "Centre", "prix_achat": "750 000 MAD", "prix_location": "4 800 MAD/mois", "img": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=480&q=80"}, {"id": "tg7", "type": "Maison", "titre": "Maison 4 pièces vue détroit", "pieces": 4, "surface": 165, "quartier": "Cap Spartel", "prix_achat": "1 500 000 MAD", "prix_location": "9 500 MAD/mois", "img": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=480&q=80"}], "Oujda": [{"id": "oj1", "type": "Appartement", "titre": "Appartement 2 pièces - Centre-ville", "pieces": 2, "surface": 72, "quartier": "Centre-ville", "prix_achat": "550 000 MAD", "prix_location": "3 200 MAD/mois", "img": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=480&q=80"}, {"id": "oj2", "type": "Maison", "titre": "Maison familiale - Hay Al Qods", "pieces": 4, "surface": 145, "quartier": "Hay Al Qods", "prix_achat": "950 000 MAD", "prix_location": "6 500 MAD/mois", "img": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=480&q=80"}, {"id": "oj3", "type": "Villa", "titre": "Villa résidence privée 5 pièces", "pieces": 5, "surface": 200, "quartier": "Complexe résidentiel", "prix_achat": "1 700 000 MAD", "prix_location": "11 000 MAD/mois", "img": "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=480&q=80"}, {"id": "oj4", "type": "Studio", "titre": "Studio Nouveau Centre", "pieces": 1, "surface": 35, "quartier": "Nouveau Centre", "prix_achat": "320 000 MAD", "prix_location": "2 200 MAD/mois", "img": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=480&q=80"}, {"id": "oj5", "type": "Appartement", "titre": "Appartement 3 pièces - Quartier Lazaret", "pieces": 3, "surface": 84, "quartier": "Quartier Lazaret", "prix_achat": "680 000 MAD", "prix_location": "4 000 MAD/mois", "img": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=480&q=80"}, {"id": "oj6", "type": "Duplex", "titre": "Duplex moderne 3 pièces - Hay Al Wafa", "pieces": 3, "surface": 115, "quartier": "Hay Al Wafa", "prix_achat": "920 000 MAD", "prix_location": "5 800 MAD/mois", "img": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=480&q=80"}]};
-  var ACTIVE  = ["Meknès", "Kénitra", "Tanger", "Oujda"];
-  var PRICE   = 'prix_location';
-  var WA      = '212XXXXXXXXX';
-  var PAGE    = 'location';
-  var S_CITY  = 'select[name="item_meta[565]"]';
-  var S_TYPE  = 'select[name="item_meta[566]"]';
-  var S_PIEC  = 'select[name="item_meta[570]"]';
-  var curProp = null;
-
-  function getVal(s){ var e=document.querySelector(s); return e?e.value:''; }
-
-  function matchPieces(pp, sel){
-    if(!sel||sel===''||sel.includes('Indiff')) return true;
-    if(sel.includes('+')) return pp>=7;
-    var n=parseInt(sel); return isNaN(n)||pp===n;
-  }
-
-  function makeCard(p){
-    var price = p[PRICE]!=='N/A' ? '<div class="gcp-prop-price">'+p[PRICE]+'</div>' : '';
-    var pcs   = p.pieces>0 ? p.pieces+' pièce'+(p.pieces>1?'s':'') : 'Terrain';
-    var data  = encodeURIComponent(JSON.stringify(p));
-    return '<div class="gcp-prop-card" onclick="gcpOpenModal(decodeURIComponent(''+data+''))">'
-      +'<img src="'+p.img+'" alt="'+p.titre+'" loading="lazy">'
-      +'<div class="gcp-prop-body">'
-      +'<span class="gcp-prop-badge">'+p.type+'</span>'
-      +'<div class="gcp-prop-title">'+p.titre+'</div>'
-      +'<div class="gcp-prop-meta">'+p.surface+' m² &middot; '+pcs+' &middot; '+p.quartier+'</div>'
-      +price
-      +'<button class="gcp-prop-btn">Je suis interesse(e)</button>'
-      +'</div></div>';
-  }
-
-  function renderAll(){
-    var area = document.getElementById('gcp-results-area');
-    var html = '';
-    ACTIVE.forEach(function(city){
-      var props = PROPS[city]||[];
-      if(!props.length) return;
-      html += '<div class="gcp-city-section">'
-        +'<div class="gcp-city-label"><h3>'+city+'</h3><span>'+props.length+' bien'+(props.length>1?'s':'')+' disponible'+(props.length>1?'s':'')+'</span></div>'
-        +'<div class="gcp-results-grid">'+props.map(makeCard).join('')+'</div>'
-        +'</div>';
-    });
-    area.innerHTML = html;
-    area.style.display='block';
-  }
-
-  function renderFiltered(city, type, pieces){
-    var area = document.getElementById('gcp-results-area');
-    if(!city){ renderAll(); return; }
-    if(ACTIVE.indexOf(city)===-1){
-      area.innerHTML='<div class="gcp-coming-soon"><div class="cs-emoji">&#x1F3D7;</div><h3>'+city+' &mdash; Bientot disponible !</h3><p>Nos equipes travaillent a referencer les meilleurs biens de cette ville. Revenez bientot !</p><button class="gcp-notify-btn" onclick="gcpNotify(''+city+'')">Me notifier quand disponible</button></div>';
-      area.style.display='block';
-      area.scrollIntoView({behavior:'smooth',block:'start'});
-      return;
-    }
-    var filtered=(PROPS[city]||[]).filter(function(p){
-      return (!type||p.type===type) && matchPieces(p.pieces,pieces);
-    });
-    if(!filtered.length){
-      area.innerHTML='<div class="gcp-no-results"><h3>Aucun bien disponible</h3><p>Aucun resultat pour ces criteres a '+city+'. Essayez d'autres filtres.</p></div>';
-    } else {
-      area.innerHTML='<div class="gcp-city-section">'
-        +'<div class="gcp-city-label"><h3>'+city+'</h3><span>'+filtered.length+' resultat'+(filtered.length>1?'s':'')+'</span></div>'
-        +'<div class="gcp-results-grid">'+filtered.map(makeCard).join('')+'</div>'
-        +'</div>';
-    }
-    area.style.display='block';
-    area.scrollIntoView({behavior:'smooth',block:'start'});
-  }
-
-  window.gcpOpenModal = function(jsonStr){
-    var p=JSON.parse(jsonStr); curProp=p;
-    document.getElementById('gcp-m-sub').textContent   = p.quartier+' · '+p.surface+' m²';
-    document.getElementById('gcp-m-type').textContent  = p.type;
-    document.getElementById('gcp-m-name').textContent  = p.titre;
-    document.getElementById('gcp-m-price').textContent = p[PRICE];
-    document.getElementById('gcp-m-img').src           = p.img;
-    document.getElementById('gcp-nom').value='';
-    document.getElementById('gcp-tel').value='';
-    document.getElementById('gcp-email').value='';
-    document.getElementById('gcp-overlay').classList.add('open');
-    document.body.style.overflow='hidden';
-  };
-
-  window.gcpCloseModal = function(){
-    document.getElementById('gcp-overlay').classList.remove('open');
-    document.body.style.overflow='';
-  };
-
-  window.gcpSendWA = function(){
-    var nom=document.getElementById('gcp-nom').value.trim();
-    var tel=document.getElementById('gcp-tel').value.trim();
-    var email=document.getElementById('gcp-email').value.trim();
-    if(!nom||!tel){alert('Merci de remplir votre nom et votre telephone.'); return;}
-    var p=curProp;
-    var lbl=PAGE==='achat'?'Achat':'Location';
-    
-    var msg='⌂ Demande de '+lbl+' - GCP Syndic\n\n'
-      +'📍 Bien : '+p.titre+'\n'
-      +'🏷️ Type : '+p.type+'\n'
-      +'📐 Surface : '+p.surface+' m²\n'
-      +'📌 Quartier : '+p.quartier+'\n'
-      +'💰 Prix : '+p[PRICE]+'\n\n'
-      +'👤 Nom : '+nom+'\n'
-      +'📞 Telephone : '+tel
-      +(email?'\n📧 Email : '+email:'');
-    window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank');
-    gcpCloseModal();
-  };
-
-  window.gcpNotify = function(city){
-    var nom=prompt('Votre nom ?'); if(!nom) return;
-    var tel=prompt('Votre numero WhatsApp ?'); if(!tel) return;
-    var msg='🔔 Notification disponibilite GCP Syndic\n\nBonjour, je souhaite etre informe(e) pour '+city+'.\n\n👤 Nom : '+nom+'\n📞 Tel : '+tel;
-    window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank');
-  };
-
-  document.getElementById('gcp-overlay').addEventListener('click',function(e){
-    if(e.target===this) gcpCloseModal();
-  });
-
-  document.addEventListener('DOMContentLoaded',function(){
-    // 1. Hide the Nouvelle recherche section (id="tr1") + its sibling form
-    var tr1 = document.getElementById('tr1');
-    if(tr1){
-      var col = tr1.closest('.fusion-layout-column');
-      if(col) col.style.display='none';
-      // Hide the next form container sibling
-      var next = col ? col.nextElementSibling : null;
-      while(next){
-        if(next.querySelector('#form_accueil-acheter,#form_accueil-louer,[id^="frm_form_21"],[id^="frm_form_22"]')){
-          next.style.display='none'; break;
-        }
-        next = next.nextElementSibling;
-      }
-    }
-
-    // 2. Move #gcp-results-area to appear RIGHT AFTER the main content wrapper
-    //    (before footer). We insert it after #z_autres_annonces or its parent.
-    var area    = document.getElementById('gcp-results-area');
-    var anchor  = document.getElementById('z_autres_annonces');
-    if(anchor && area){
-      // Walk up to the top fusion-layout-column wrapper
-      var wrapper = anchor.closest('.fusion-layout-column');
-      if(wrapper && wrapper.parentNode){
-        wrapper.parentNode.insertBefore(area, wrapper.nextSibling);
-      }
-      anchor.style.display='none';
-    }
-
-    // 3. Intercept only the FIRST Valider button
-    var firstBtn = document.querySelector('.frm_button_submit');
-    if(firstBtn){
-      firstBtn.addEventListener('click', function(e){
-        e.preventDefault(); e.stopPropagation();
-        renderFiltered(getVal(S_CITY), getVal(S_TYPE), getVal(S_PIEC));
-      });
-    }
-
-    // 4. Show all on load
-    renderAll();
-  });
-})();
-</script>
 </body>
 </html>
