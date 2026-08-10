@@ -4,6 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Demande de Bien - GCP Syndic</title>
+<!-- EmailJS Script -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+      // Initialisez avec votre PUBLIC KEY (à récupérer sur emailjs.com)
+      emailjs.init("VOTRE_PUBLIC_KEY");
+  })();
+</script>
 <style>
   body {
     font-family: 'Poppins', 'Segoe UI', sans-serif;
@@ -293,8 +301,12 @@ function toggleMobileMenu(btn){
       <label for="phone">Numéro de téléphone *</label>
       <input type="tel" id="phone" placeholder="Ex: 06 62 08 17 84" required>
     </div>
+    <div class="form-group">
+      <label for="email">Adresse e-mail *</label>
+      <input type="email" id="email" placeholder="Ex: votre@email.com" required>
+    </div>
     
-    <button class="btn-whatsapp" onclick="sendToWhatsApp()">
+    <button class="btn-whatsapp" onclick="sendToWhatsApp()" id="submitBtn">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
         <path d="M13.6+212 5 22 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c-.003 1.396.362 2.76.1054 3.963L0 16l4.237-1.111c1.157.636 2.454.972 3.754.973h.001c4.366 0 7.925-3.558 7.93-7.925A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c.004-3.639 2.965-6.598 6.604-6.598 1.764.002 3.42.689 4.667 1.936a6.56 6.56 0 0 1 1.928 4.671c-.005 3.638-2.965 6.596-6.606 6.596z"/>
         <path d="M11.846 9.387c-.213-.107-1.265-.624-1.462-.696-.196-.071-.339-.107-.481.107-.143.214-.553.696-.677.84-.125.142-.25.16-.464.053-.213-.107-.903-.333-1.72-.94-.636-.473-1.065-1.058-1.19-1.271-.124-.214-.013-.33.094-.436.096-.095.213-.25.32-.375.106-.125.142-.214.213-.357.07-.143.035-.268-.018-.375-.053-.107-.482-1.164-.66-1.595-.173-.42-.348-.363-.482-.37-.124-.006-.268-.006-.411-.006-.143 0-.374.054-.57.268-.196.214-.75.733-.75 1.787s.768 2.073.875 2.216c.107.142 1.512 2.311 3.662 3.239.513.221.913.353 1.226.452.514.163.983.14 1.353.085.418-.063 1.285-.525 1.466-1.033.181-.508.181-.94.127-1.033-.053-.093-.196-.148-.41-.255z"/>
@@ -332,27 +344,62 @@ function toggleMobileMenu(btn){
   function sendToWhatsApp() {
     const name = document.getElementById('name').value.trim();
     const phone = document.getElementById('phone').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const btn = document.getElementById('submitBtn');
     
-    if (!name || !phone) {
-      alert("Veuillez remplir votre nom et numéro de téléphone.");
+    if (!name || !phone || !email) {
+      alert("Veuillez remplir tous les champs (nom, téléphone et e-mail).");
       return;
     }
+
+    // Désactiver le bouton pendant l'envoi
+    const originalBtnText = btn.innerHTML;
+    btn.innerHTML = "Envoi en cours...";
+    btn.disabled = true;
     
     // Construct message
     let msg = `Bonjour GCP Syndic,\n\nJe m'appelle *${name}* et je suis intéressé(e) par l'annonce suivante :\n\n`;
     msg += `📍 *Bien :* ${type} à ${city}\n`;
     if (rooms) msg += `🛏 *Détails :* ${rooms}\n`;
     
-    msg += `\nPouvez-vous me recontacter au ${phone} pour plus d'informations ?`;
+    msg += `\nMon adresse e-mail : ${email}\n`;
+    msg += `Pouvez-vous me recontacter au ${phone} pour plus d'informations ?`;
     
-    // Target WhatsApp Number
-    const targetNumber = '212662081784'; 
+    // Paramètres pour EmailJS
+    const templateParams = {
+      client_name: name,
+      client_email: email,
+      client_phone: phone,
+      property_type: type,
+      property_city: city,
+      property_details: rooms || 'N/A'
+    };
+
+    // --- À REMPLACER PAR VOS ID ---
+    const serviceID = 'VOTRE_SERVICE_ID';
+    const templateClient = 'VOTRE_TEMPLATE_ID_CLIENT';
+    const templateAdmin = 'VOTRE_TEMPLATE_ID_ADMIN';
+
+    // Envoyer les e-mails puis rediriger vers WhatsApp
+    // Note: si les ID ne sont pas configurés, ça va rater. On met un try/catch ou on redirige quand même.
     
-    // Create WhatsApp Link
-    const waLink = `https://wa.me/${targetNumber}?text=${encodeURIComponent(msg)}`;
-    
-    // Open WhatsApp
-    window.location.href = waLink;
+    Promise.all([
+      emailjs.send(serviceID, templateClient, templateParams).catch(e => console.log("Email client non configuré", e)),
+      emailjs.send(serviceID, templateAdmin, templateParams).catch(e => console.log("Email admin non configuré", e))
+    ]).finally(() => {
+      // Restaurer le bouton
+      btn.innerHTML = originalBtnText;
+      btn.disabled = false;
+
+      // Target WhatsApp Number
+      const targetNumber = '212662081784'; 
+      
+      // Create WhatsApp Link
+      const waLink = `https://wa.me/${targetNumber}?text=${encodeURIComponent(msg)}`;
+      
+      // Open WhatsApp
+      window.location.href = waLink;
+    });
   }
 </script>
 
