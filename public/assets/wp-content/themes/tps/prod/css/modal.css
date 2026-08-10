@@ -1,0 +1,58 @@
+.modal-content {
+  background: white !important;
+}
+.modal-header {
+  border:none !important;
+  padding-bottom: 0 !important;
+}
+.modal-body {
+    padding: 0px 10px 20px 10px !important;
+}
+@media only screen and (min-width: 800px) {
+  .modal-lg {
+      width: 710px !important;
+  }
+  .modal-body {
+      padding: 0px 100px 20px 100px !important;
+  }
+}
+.modal-title {
+    font-size: 14px !important;
+    text-align:center !important;
+    margin-top: 0px !important;
+}
+.modal-body h3 {
+    color: #0a2631 !important;
+    font-size: 21px !important;
+    text-align:center !important;
+    margin: 0px !important;
+    font-weight: bold !important;
+}
+.modal-body h4 {
+    color: black !important;
+    font-size: 14px !important;
+    border-bottom:1px solid #ffffff;
+    margin: 20px 0 10px 0 !important;
+    padding-bottom:10px !important;
+    font-weight:bold !important;
+}
+.modal-body .intro {
+    text-align:center !important;
+    margin-bottom: 10px !important;
+}
+.modal-body .legal {
+    font-size: 12px !important;
+    text-align:center;
+}
+/*.modal-body .frm_submit input {
+    font-size: 16px !important;
+    padding:10px 0 !important;
+}*/
+.modal-body .frm_required {
+    margin-left:2px;
+}
+.modal-header .close {
+    font-size: 40px !important;
+    margin-top: -13px !important;
+    font-weight: 100 !important;
+}

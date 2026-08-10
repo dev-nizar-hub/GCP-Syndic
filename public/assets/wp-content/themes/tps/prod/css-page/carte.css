@@ -1,0 +1,119 @@
+#z_carte .fusion-builder-row {
+  padding:30px 40px !important;
+  -moz-box-shadow: 0px 0px 30px rgba(0,0,0,0.15);
+  -webkit-box-shadow: 0px 0px 30px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 30px rgba(0,0,0,0.15);
+}
+#B_agences {
+    margin-top: 10px;
+    font-size: 16px !important;
+    text-transform: uppercase;
+    color: white !important;
+    padding: 10px 20px !important;
+    background: #0a2631 !important;
+    display: block !important;
+}
+#z_adresses {
+  z-index: 2;
+  height: 340px;
+}
+#z_adresses .agence {
+  display: block;
+  margin-bottom:20px;
+  width: 170px;
+}
+#z_adresses .agence:hover .nom {
+  	color: #0a2631;
+}
+#z_adresses .agence:hover .point {
+  	margin-top:-5px;
+}
+#z_adresses .nom {
+  font-weight:bold;
+  margin:0 !important;
+  color: black;
+  text-align: left;
+}
+#z_adresses .agence:nth-child(2) .nom {
+  width: 190px;
+}
+#z_adresses .agence:nth-child(3) .nom {
+  width: 170px;
+}
+#z_adresses .adr {
+
+}
+#z_adresses .agence:nth-child(6) .nom,
+#z_adresses .agence:nth-child(7) .nom, 
+#z_adresses .agence:nth-child(8) .nom, 
+#z_adresses .agence:nth-child(9) .nom, 
+#z_adresses .agence:nth-child(10) .nom 
+{
+  text-align:right;
+}
+/* ----- pointeurs sur la cartes ----- */
+#z_adresses .point {
+  position:absolute;
+}
+#ag_199 {
+  left: 250px;
+  top: 0px;
+}
+#ag_199_2 {
+  left: 240px;
+  top: 0px;
+}
+#ag_200 {
+  left: 350px;
+  top: 40px;
+}
+#ag_196 {
+  left: 390px;
+  top: 60px;
+}
+#ag_193 {
+  left: 510px;
+  top: 80px;
+}
+#ag_1354 {
+  left: 490px;
+  top: 85px;
+}
+#ag_192 {
+  left: 410px;
+  top: 100px;
+}
+#ag_217 {
+  left: 410px;
+  top: 50px;
+}
+#ag_194 {
+  left: 630px;
+  top: 130px;
+}
+#ag_195 {
+  left: 330px;
+  top: 200px;
+}
+#ag_1427 {
+  left: 350px;
+  top: 220px;
+}
+#ag_513671 {
+  left: 330px;
+  top: 120px;
+}
+
+#z_carte_paris {
+  position: absolute;
+  z-index: 0;
+  top: 0px;
+  left:20%;
+  width: 60%;
+}
+#z_carte_paris img {
+  width:100%;
+}
+.adr_agences p {
+  font-size: 12px !important;
+}

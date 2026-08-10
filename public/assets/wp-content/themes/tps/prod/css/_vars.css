@@ -1,0 +1,19 @@
+:root {
+  --rouge-ag: #0a2631;
+  --gris-ag: #ffffff;
+  --noir-ag: #0a2631;
+}
+.maju,
+.maju p,
+.maju h1,
+.maju h2,
+.maju h3,
+.maju h4,
+.maju h5,
+.maju h6 {
+  text-transform:uppercase;
+}
+.majpuce h3 {
+  text-transform:uppercase;
+  margin-bottom:20px !important;
+}

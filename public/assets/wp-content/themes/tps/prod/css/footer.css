@@ -1,0 +1,64 @@
+.fusion-footer .fusion-column {
+  width: 25% !important;
+  margin-left: 5% !important;
+}
+.fusion-footer .fusion-column:nth-child(1) {
+  width:100% !important;
+  margin:0 !important;
+}
+#media_image-2 {
+  width:15%;
+}
+#nav_menu-6 li, 
+#nav_menu-7 li {
+  padding-bottom: 0px;
+  border:none !important;
+}
+#nav_menu-6 a:before, 
+#nav_menu-7 a:before {
+  display:none !important;
+}
+#sib_subscribe_form-2 .widget-title,
+#social_links-widget-2 .widget-title {
+  display:none !important;
+}
+.sib_signup_box_inside_1 .t_sib {
+  margin:0 !important;
+  color:#ffffff !important;
+}
+.sib-email-area {
+  width: 100% !important;  
+}
+.sib-email-area .sib-email-area {
+  width: 180px !important;
+  padding: 6px !important;
+  position:relative;
+  float:left;
+  color: #0a2631;
+  margin-right: 5px;
+  height: 30px !important;
+}
+.sib-default-btn {
+  background:#0a2631;
+  color:white;
+  position:relative;
+  float:left;
+  border:none !important;
+  padding: 7px 13px 8px 13px !important;
+  margin: 0 !important;
+  height: 30px !important;
+}
+
+.fusion-social-networks-wrapper {
+  margin:0 !important;
+}
+#z_copy p {
+  font-size:12px !important; 
+}
+#z_copy a {
+  color:gray !important; 
+  font-size:12px !important; 
+}
+#z_newsletter p {
+  margin:0 !important;
+}

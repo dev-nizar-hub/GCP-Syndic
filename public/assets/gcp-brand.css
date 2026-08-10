@@ -1,0 +1,439 @@
+/*
+ * GCP Syndic — Brand Color Override
+ * 3-color palette: White #ffffff | Dark Blue #0a2631 | Blue #317bff
+ * This file overrides Avada's color system via CSS custom properties + specific selectors.
+ */
+
+/* =============================================
+   1. OVERRIDE AVADA CSS CUSTOM PROPERTIES
+   ============================================= */
+:root {
+    --awb-color1: #0a2631 !important;
+    --awb-color2: #0a2631 !important;
+    --awb-color3: #317bff !important;
+    --awb-color4: #ffffff !important;
+    --awb-color5: #317bff !important;
+    --awb-color6: #0a2631 !important;
+    --awb-color7: #0a2631 !important;
+    --awb-color8: #ffffff !important;
+    --primary-color: #317bff !important;
+    --link-color: #317bff !important;
+    --awb-active-color: #317bff !important;
+}
+
+/* Logo styling moved to header section to prevent conflicts */
+
+/* =============================================
+   2. GLOBAL: Body and main content = White BG
+   ============================================= */
+body,
+#wrapper,
+#main,
+.fusion-page-title-bar,
+.fusion-main-menu,
+.awb-menu__main,
+.awb-sticky-header-normal,
+.awb-sticky-header-wrapper {
+    background-color: #ffffff !important;
+}
+
+/* Ensure header NEVER gets a background image and has white background */
+.fusion-header-wrapper,
+.fusion-header,
+.fusion-sticky-header-wrapper,
+.awb-sticky,
+.fusion-secondary-header,
+/* The actual header row used on this site */
+.fusion-builder-row-1,
+.fusion-builder-row-1-1 {
+    background-image: none !important;
+    background-color: #ffffff !important;
+    --awb-background-color: #ffffff !important;
+}
+
+body,
+p, li, td, th, dt, dd, blockquote,
+.fusion-text,
+.fusion-text p {
+    color: #0a2631 !important;
+}
+
+/* =============================================
+   3. HEADER: White background, dark blue text
+   ============================================= */
+.fusion-header-wrapper,
+.fusion-header,
+.fusion-sticky-header-wrapper,
+.fusion-secondary-header,
+.fusion-header-sticky-height,
+.awb-sticky,
+.fusion-builder-row-1,
+.fusion-builder-row-1-1 {
+    background-color: #ffffff !important;
+    --awb-background-color: #ffffff !important;
+}
+
+/* Make header much smaller and more professional */
+.fusion-header,
+.fusion-builder-row-1 {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    --awb-padding-top: 5px !important;
+    --awb-padding-bottom: 5px !important;
+    min-height: 60px !important;
+    border-bottom: 1px solid rgba(10, 38, 49, 0.1) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05) !important;
+}
+.fusion-header-v1 .fusion-header {
+    height: 60px !important;
+}
+
+/* Logo specific sizing to guarantee it doesn't blow up */
+img.wp-image-18482,
+img.wp-image-16807 {
+    height: 120px !important;
+    width: auto !important;
+    max-width: 350px !important;
+    max-height: 120px !important;
+    object-fit: contain !important;
+    /* Negative margins allow the logo to be large without expanding the header height */
+    margin-top: -30px !important;
+    margin-bottom: -30px !important;
+}
+
+.fusion-header-wrapper *,
+.fusion-header *,
+.fusion-builder-row-1 *,
+.awb-menu__main-a,
+.awb-menu__main-a span {
+    color: #0a2631 !important;
+    --awb-color: #0a2631 !important;
+}
+
+.awb-menu__main-a:hover,
+.awb-menu__main-li:hover > .awb-menu__main-a,
+.awb-menu__main-li.current-menu-item > .awb-menu__main-a,
+.awb-menu__main-li.current-menu-ancestor > .awb-menu__main-a {
+    color: #317bff !important;
+    background-color: transparent !important;
+}
+
+/* Dropdown submenus */
+.awb-menu__sub {
+    background-color: #ffffff !important;
+    border: 1px solid rgba(10, 38, 49, 0.1) !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05) !important;
+}
+
+.awb-menu__sub-a,
+.awb-menu__sub-a span {
+    color: #0a2631 !important;
+}
+
+/* =============================================
+   4. FOOTER: Dark Blue background, white text
+   ============================================= */
+.fusion-footer,
+.fusion-footer-widget-area,
+.fusion-footer-copyright-area,
+#wrapper .fusion-footer-widget-area {
+    background-color: #0a2631 !important;
+}
+
+.fusion-footer *,
+.fusion-footer-widget-area *,
+.fusion-footer-copyright-area * {
+    color: #ffffff !important;
+}
+
+/* =============================================
+   5. BUTTONS: Blue
+   ============================================= */
+.fusion-button,
+.fusion-button-wrapper a,
+.fusion-button.button-default,
+.fusion-button.button-medium,
+.fusion-button.button-large,
+input[type="submit"],
+button[type="submit"],
+.frm_submit button,
+.wp-block-button__link {
+    background-color: #317bff !important;
+    border-color: #317bff !important;
+    color: #ffffff !important;
+}
+
+.fusion-button:hover,
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+    background-color: #0a2631 !important;
+    border-color: #0a2631 !important;
+    color: #ffffff !important;
+}
+
+/* =============================================
+   6. HEADINGS: Dark Blue
+   ============================================= */
+h1, h2, h3, h4, h5, h6,
+.fusion-title-heading,
+.fusion-title-size-one,
+.fusion-title-size-two,
+.fusion-title-size-three,
+.fusion-title-size-four,
+.fusion-title-size-five,
+.fusion-title-size-six {
+    color: #0a2631 !important;
+}
+
+/* =============================================
+   7. LINKS: Blue
+   ============================================= */
+a:not(.fusion-button):not(.awb-menu__main-a):not(.awb-menu__sub-a) {
+    color: #317bff !important;
+}
+
+a:not(.fusion-button):hover {
+    color: #0a2631 !important;
+}
+
+/* =============================================
+   8. SVG ICONS: Force Blue via CSS filter
+   (Converts any colored SVG img to #317bff hue)
+   ============================================= */
+.fusion-content-box-icon img[src*=".svg"],
+.fusion-imageframe img[src*=".svg"],
+img[src*="expertise"],
+img[src*="famille"],
+img[src*="proximite"],
+img[src*="satisfaction"],
+img[src*="vente.svg"],
+img[src*="copro.svg"],
+img[src*="existence"],
+img[src*="paris.svg"],
+img[src*="pointeur"],
+img[src*="marqueur"] {
+    filter: invert(34%) sepia(96%) saturate(1590%) hue-rotate(209deg) brightness(103%) contrast(103%) !important;
+}
+
+/* =============================================
+   9. DARK SECTIONS with blue/dark backgrounds
+   ============================================= */
+.fusion-fullwidth[style*="background-color"] {
+    /* Do not force - keep section backgrounds unless they are rogue colors */
+}
+
+/* Stats/counter section - keep dark blue */
+.fusion-counters-box .fusion-counter-box,
+.fusion-section-separator,
+[class*="fusion-builder-row"] .fusion-fullwidth.fusion-section-bg-dark {
+    background-color: #0a2631 !important;
+}
+
+/* =============================================
+   10. TABS: Blue active state
+   ============================================= */
+.fusion-tabs .nav-tabs > li.active > a,
+.fusion-tabs .nav-tabs > li.active > a:hover,
+.fusion-tabs .nav-tabs > li.active > a:focus {
+    background-color: #317bff !important;
+    border-color: #317bff !important;
+    color: #ffffff !important;
+}
+
+/* =============================================
+   11. FORMS: Clean white + dark blue text
+   ============================================= */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+textarea,
+select {
+    background-color: #ffffff !important;
+    border-color: #0a2631 !important;
+    color: #0a2631 !important;
+}
+
+/* =============================================
+   12. SLIDING BAR & SECONDARY ELEMENTS
+   ============================================= */
+.fusion-sliding-bar-area {
+    background-color: #0a2631 !important;
+}
+
+.fusion-sliding-bar-area * {
+    color: #ffffff !important;
+}
+
+/* =============================================
+   13. CARD CONTENT BOXES: White BG, Blue accent
+   ============================================= */
+.fusion-content-box-wrapper {
+    background-color: #ffffff !important;
+    border-color: #317bff !important;
+}
+
+.fusion-content-box-wrapper .heading .heading-link span {
+    color: #317bff !important;
+}
+
+/* =============================================
+   14. BLOG/NEWS SECTION: Clean white cards
+   ============================================= */
+.fusion-post-grid .fusion-post-wrapper,
+.fusion-blog-layout-grid article {
+    background-color: #ffffff !important;
+}
+
+/* =============================================
+   15. ACTIVE NAV TAB PILLS (blog filter)
+   ============================================= */
+.fusion-filters a.fusion-filter-active {
+    background-color: #317bff !important;
+    border-color: #317bff !important;
+    color: #ffffff !important;
+}
+
+/* =============================================
+   16. HERO BACKGROUND IMAGE FORCE
+   ============================================= */
+/* Only target sections that explicitly have the background-image var set.
+   The JS snippet below handles applying it at runtime. */
+.fusion-fullwidth[style*="awb-background-image"] {
+    background-size: cover !important;
+    background-position: center center !important;
+}
+
+/* Fallback for the main hero on homepage (row-3/row-4 in the page builder) */
+body.home .fusion-fullwidth.fusion-builder-row-3,
+body.home .fusion-fullwidth.fusion-builder-row-4 {
+    background-image: url('/Quality%20Restoration-Ultra%20HD-Grand-Theatre-of-Rabat-Morocco-1024x546.jpeg') !important;
+    background-size: cover !important;
+    background-position: center center !important;
+}
+
+
+/* =============================================
+   17. FOOTER LOGO SIZE
+   ============================================= */
+.fusion-footer-widget-area .fusion-logo img,
+.fusion-footer .fusion-logo img {
+    height: 60px !important;
+    width: auto !important;
+    max-width: 180px !important;
+    object-fit: contain !important;
+    filter: brightness(10) !important; /* Make logo white on dark bg */
+}
+
+/* =============================================
+   18. MODERN UI ENHANCEMENTS (Glassmorphism & Hover)
+   ============================================= */
+/* Feature Cards Glassmorphism */
+body.home .content-box-column {
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    border-radius: 12px !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+body.home .content-box-column .content-box-wrapper {
+    background-color: rgba(255, 255, 255, 0.75) !important;
+    backdrop-filter: blur(12px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 8px 32px 0 rgba(10, 38, 49, 0.1) !important;
+    padding: 35px 25px !important;
+}
+
+/* Hover Lift Effect for Cards */
+body.home .content-box-column:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 15px 40px rgba(10, 38, 49, 0.15) !important;
+}
+
+/* Smooth Buttons */
+.fusion-button.button-default {
+    transition: all 0.3s ease !important;
+    border-radius: 6px !important;
+}
+.fusion-button.button-default:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 5px 15px rgba(49, 123, 255, 0.3) !important;
+}
+
+/* =============================================
+   20. HIDE "ESPACE CLIENT" MENU
+   ============================================= */
+li#menu-item-20330 {
+    display: none !important;
+}
+
+/* =============================================
+   21. FIX BLACK COUNTER/STATS BOXES
+   ============================================= */
+/* The Avada counter boxes were getting a dark background - reset to white */
+#z_chiffres .counter-box-container,
+#z_chiffres .content-box-percentage,
+#z_chiffres .content-box-counter,
+#z_chiffres .fusion-counters-box,
+#z_chiffres .counter-box-wrapper,
+#z_chiffres .fusion-column-wrapper {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+#z_chiffres .display-counter,
+#z_chiffres .unit {
+    color: #0a2631 !important;
+}
+#z_chiffres .counter-box-content {
+    color: #555 !important;
+}
+
+/* Hide the wpseoinj spam block if it appears */
+.wpseoinj-block {
+    display: none !important;
+}
+
+/* =============================================
+   22. FIX FOOTER TEXT COLORS
+   ============================================= */
+/* All footer text white on dark navy background */
+.fusion-footer-widget-area,
+.fusion-footer-widget-area *,
+.fusion-footer-widget-area a,
+.fusion-footer-widget-area p,
+.fusion-footer-widget-area li,
+.fusion-footer-widget-area span,
+.fusion-footer-widget-area h1,
+.fusion-footer-widget-area h2,
+.fusion-footer-widget-area h3,
+.fusion-footer-widget-area h4,
+.fusion-footer-widget-area h5,
+.fusion-footer-widget-area .widget-title {
+    color: #c8d8e4 !important;
+}
+.fusion-footer-widget-area a:hover {
+    color: #317bff !important;
+}
+/* Footer bottom bar */
+.fusion-footer-copyright-area,
+.fusion-footer-copyright-area *,
+.fusion-footer-copyright-area a {
+    color: #8a9bb0 !important;
+}
+.fusion-footer-copyright-area a:hover {
+    color: #317bff !important;
+}
+/* Newsletter input in footer */
+.fusion-footer-widget-area input[type="email"] {
+    color: #0a2631 !important;
+    background: #ffffff !important;
+}
+/* "Découvrir l'AtriumNews" heading */
+.fusion-footer-widget-area .widget-title,
+.fusion-footer-widget-area .widgettitle {
+    color: #317bff !important;
+    font-weight: 700 !important;
+}

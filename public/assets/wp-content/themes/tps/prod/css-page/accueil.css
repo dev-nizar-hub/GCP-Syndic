@@ -1,0 +1,262 @@
+.fusion-tabs.classic .nav-tabs > li.active .tab-link {
+  border-color:#ffffff !important;
+}
+#z_recherche {
+    border-radius: 8px;
+    overflow: hidden;
+}
+#z_recherche form {
+  height: 90px !important;
+}
+#z_recherche .frm_submit {
+  position: absolute;
+  right: 40px;
+  width: 90px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block;
+  top: 50px;
+}
+
+#z_recherche .frm_form_field {
+  margin-bottom:10px !important;
+}
+#z_recherche .frm_html_container {
+  margin:0 !important;
+}
+#frm_field_479_container {
+  width: 28%;
+}
+#z_recherche .active .fusion-tab-heading {
+  color:#0a2631 !important;
+}
+.type_bien {
+  width: 67% !important;
+}
+.cp {
+  width: 11% !important;
+  margin-left: 0 !important;
+}
+#form_faire_gerer .frm_submit {
+  margin-top:18px !important;
+}
+.B_metier {
+  margin-bottom:20px;
+}
+#z_accueil_visuel {
+	text-align:center;
+	margin:25px 0;
+}
+/* ---------- resume - visuel ---------- */
+#t_resume span {
+  display:block !important;
+  float:right;
+  padding: 0px 10px 0 10px;
+  margin-bottom: 0px;
+  font-weight:bold !important;
+  font-size: 47px !important;
+  line-height:55px !important;
+}
+@media only screen and (max-width: 800px) {
+  #t_resume span {
+    font-size: 28px !important;
+    line-height: 30px !important;
+    margin: 0 !important;
+  }
+}
+/* ---------- resume - blocs ---------- */
+#z_resume .col {
+  position:absolute;
+  top:00px !important;
+  -moz-box-shadow: 0px 0px 30px rgba(0,0,0,0.15);
+  -webkit-box-shadow: 0px 0px 30px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 30px rgba(0,0,0,0.15);
+  padding:20px !important;
+}
+#z_resume img {
+  height:60px !important;
+}
+#z_resume h2 {
+  font-weight:700 !important;
+  font-size: 24px !important;
+  line-height: 28px !important;
+}
+#z_resume h2 span {
+  color:black !important;
+  font-weight:400 !important;
+  clear:both;
+  display:block;
+  font-size:18px !important;
+}
+#z_resume .heading {
+	height: 140px !important;
+}
+#z_resume .content-container,
+#z_resume .content-container p {
+  font-weight:bold !important;
+  font-size: 18px !important;
+  height: 40px !important;
+  line-height: 22px !important;
+  color: black !important;
+}
+#z_resume .sinfo {
+  font-size:18px !important;
+  font-weight:normal !important;
+}
+/* ----------- metiers ---------*/
+.metier .fusion-builder-row {
+  -moz-box-shadow: 0px 0px 30px rgba(0,0,0,0.15);
+  -webkit-box-shadow: 0px 0px 30px rgba(0,0,0,0.15);
+  box-shadow: 0px 0px 30px rgba(0,0,0,0.15);
+  margin-bottom: 50px;
+}
+.metier .fusion-layout-column {
+  margin:0 !important;
+}
+.metier h3 {
+  color:#0a2631 !important;
+  margin-bottom:20px !important;
+  font-weight:bold !important;
+  font-size: 26px !important;
+}
+.metier .txt_metier p {
+  margin-bottom:10px !important;
+  line-height:24px;
+  font-size: 18px !important;
+  color: black;
+}
+.metier .I_metier {
+  padding: 30px 30px 0 30px !important;
+}
+.metier .B_metier a {
+  float:left;
+}
+#z_achat .B_metier a,
+#z_gestion .B_metier a {
+  float:right;
+}
+
+.metier .B_metier a {
+  margin-top:10px;
+  font-size: 16px !important;
+  text-transform:uppercase;
+  color: white !important;
+  padding:10px 20px !important;
+  background:#0a2631 !important;
+  display:block !important;
+}
+/* --------------- agences ------------ */
+
+
+/* --------------- temoignage ------------ */
+#z_picto_temoin {
+  position: absolute;
+  z-index: 1;
+  font-size: 100px !important;
+  top: 0px;
+  left: 150px;
+  opacity: .65;
+}
+#z_temoignages {
+  z-index: 2;
+  position: relative;
+}
+#z_temoignages blockquote,
+#z_temoignages blockquote q {
+  background:transparent !important;
+}
+#z_temoignages blockquote p {
+  font-size: 29px;
+  width: 100%;
+  color:white;
+  font-style: normal;
+  margin: 0;
+  line-height: 35px;
+}
+#z_temoignages .author {
+  font-size: 12px;
+  color:#0a2631 !important;
+  font-weight: 100 !important;
+}
+/* --------------- blog ------------ */
+
+/* --------------- recrutement ------------ */
+#z_pic_recrut {
+ filter: opacity(0.25); 
+}
+#z_job {
+  color:white !important;
+  margin:0;
+}
+#z_job h3 {
+  color:white !important;
+}
+#z_job p {
+  margin-bottom:10px !important;
+}
+.B_job {
+  background-color:white !important;
+}
+.B_job .fusion-button-text {
+  color:#0a2631 !important;  
+  padding:10px 30px;
+}
+/* --------------- chiffres ------------ */
+#z_ans img {
+  margin-top:15px !important;
+}
+#z_epargne img {
+  margin-top:20px !important;
+}
+.chiffre .fusion-imageframe {
+  width:40% !important;
+  margin:0 30% !important;
+  height: 80px;
+}
+/* --------------- biens ------------ */
+#z_autres_annonces .fusion-carousel .fusion-carousel-item .fusion-carousel-item-wrapper .fusion-image-wrapper {
+    height: 200px;
+    overflow: hidden;
+}
+.fusion-carousel-border .fusion-image-wrapper {
+  border:none !important;
+}
+#z_autres_annonces p {
+  text-align:left;
+}
+#z_autres_annonces .type_offre {
+  margin-top:5px !important;
+    color:var(--rouge-ag) !important;
+}
+#z_autres_annonces .type_bien {
+  font-size:16px;
+  color:var(--noir-ag) !important;
+}
+#z_autres_annonces .lieu {
+  font-size:16px;
+    color:var(--noir-ag) !important;
+}
+#z_autres_annonces .surface_nbp {
+  font-size:16px;
+    color:var(--noir-ag) !important;
+}
+#z_autres_annonces .imageframe-align-center {
+    text-align: center;
+    height: 230px;
+    overflow: hidden;
+}
+@media only screen and (max-width: 800px) {
+  .metier .txt_metier p {
+    font-size: 16px !important;
+    line-height: 19px !important;
+  }
+  #main h2 {
+    font-size: 30px !important;
+    line-height: 34px !important;
+  }
+  .metier h3 {
+    font-size: 24px !important;
+    display: block;
+    line-height: 26px !important;
+  }  
+}

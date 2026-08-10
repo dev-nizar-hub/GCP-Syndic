@@ -1,0 +1,112 @@
+.fusion-main-menu .fusion-icon-sliding-bar:before {
+  content: "\f007" !important;
+  font-family: "Font Awesome 5 Free" !important;
+  font-weight: 400;
+}
+#slidingbar .col-md-3:nth-child(3){
+  width:50% !important;
+}
+.fusion-logo img {
+    width: auto !important;
+    height: 45px !important;
+}
+/* menu */
+.m_m h1 {
+  color:#0a2631 !important;
+  font-weight: 600 !important;
+}
+.m_m p {
+  margin-top:10px !important;
+  line-height:1.3em !important;
+  margin-bottom:0px !important;
+}
+.fusion-megamenu-holder {
+  background:none !important;
+}
+#m_metiers .fusion-column-inner-bg-wrapper {
+  height:100px !important;
+}
+#m_metiers .fusion-text {
+  font-size:17px !important;
+}
+#m_biens {
+  margin-left: 408px;
+}
+.fusion-menu-element-wrapper .fusion-megamenu-wrapper .fusion-megamenu-holder .fusion-megamenu .fusion-megamenu-submenu {
+  padding-top:0 !important;
+}
+#m_agences {
+  margin-left:250px;
+}
+#m_agences h1,
+#m_espaces h1 {
+  color:#0a2631 !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  margin-bottom:0px !important;
+}
+#m_agences h2,
+#m_espaces h2 {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  margin-top: 20px !important;
+  margin-bottom: 0px !important;
+}
+#m_agences h3,
+#m_espaces h3 {
+  margin-top: 10px !important;
+  margin-bottom:0px !important;
+  color:#0a2631 !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+#m_agences p,
+#m_espaces p {
+  margin:0px !important;
+}
+#m_agences a,
+#m_espaces a {
+  font-size: 16px !important;
+  color:black !important;
+}
+#m_agences a:hover,
+#m_espaces a:hover {
+  font-size: 16px !important;
+  color:#0a2631 !important;
+}
+#m_metiers,
+#m_biens,
+#m_espaces,
+#m_agences {
+  background: rgba(255,255,255,0.95) !important;
+  box-shadow: 0 0 10px 5px rgb(0 0 0 / 30%);
+}
+#m_espaces {
+  margin-left: 360px;
+  margin-right: -5px;
+}
+#m_espaces .fusion-column-wrapper {
+  margin-right:0;
+  padding-right: 0 !important;
+}
+.fusion-menu-element-wrapper .inner {
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 10px;
+}
+.m_espace_client i {
+  margin-right:10px;
+}
+.parent-pageid-16757 .m_espace_client {
+  display:none !important;
+}
+.fusion-megamenu h1 {
+  font-size:18px !important;
+}
+.za {
+  position: fixed !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  z-index: 99999999999999 !important;
+  background: white;
+}

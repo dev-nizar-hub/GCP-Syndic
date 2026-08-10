@@ -1,0 +1,77 @@
+c:/xampp/htdocs/GCP Syndic Website v2/public\atrium.html:818: <a href="/2025/02/05/voeux-2025-une-journee-de-star-au-studio-harcourt-paris/" aria-label="Vœux 2025 : Une journée de Star au Studio Harcourt Maroc">
+c:/xampp/htdocs/GCP Syndic Website v2/public\atrium.html:826: <div class="fusion-post-content-wrapper" style="padding:10px 0 10px 0;"><div class="fusion-post-content post-content"><h2 class="blog-shortcode-post-t
+c:/xampp/htdocs/GCP Syndic Website v2/public\atrium.html:831: </div><div style="text-align:right;"><a class="fusion-button button-flat fusion-button-default-size button-default fusion-button-default button-8 fusi
+c:/xampp/htdocs/GCP Syndic Website v2/public\nos-biens-achat.html:558: </div><div class="fusion-clearfix"></div></div></div><div class="fusion-layout-column fusion_builder_column fusion-builder-column-15 fusion_builder_co
+c:/xampp/htdocs/GCP Syndic Website v2/public\nos-biens-achat.html:624: </div><div class="fusion-clearfix"></div></div></div><div class="fusion-layout-column fusion_builder_column fusion-builder-column-37 fusion_builder_co
+c:/xampp/htdocs/GCP Syndic Website v2/public\nos-biens-location.html:621: </div><div class="fusion-clearfix"></div></div></div><div class="fusion-layout-column fusion_builder_column fusion-builder-column-34 fusion_builder_co
+c:/xampp/htdocs/GCP Syndic Website v2/public\nos-metiers-assurances.html:463: <div id="imdw-footer" data-cid="38284" data-hash="T50JV-2MQX-PAAP0-M19H-4VLKWK" data-ctype="brand" data-theme="dark" data-background="white" data-enab
+c:/xampp/htdocs/GCP Syndic Website v2/public\nos-metiers-gestion-locative.html:455: <div id="imdw-footer" data-cid="38284" data-hash="T50JV-2MQX-PAAP0-M19H-4VLKWK" data-ctype="brand" data-theme="dark" data-background="white" data-enab
+c:/xampp/htdocs/GCP Syndic Website v2/public\nos-metiers-gestion-locative.html:711: <a href="/2025/02/05/voeux-2025-une-journee-de-star-au-studio-harcourt-paris/" aria-label="Vœux 2025 : Une journée de Star au Studio Harcourt Maroc">
+c:/xampp/htdocs/GCP Syndic Website v2/public\nos-metiers-gestion-locative.html:719: <div class="fusion-post-content-wrapper" style="padding:10px 0 10px 0;"><div class="fusion-post-content post-content"><h2 class="blog-shortcode-post-t
+c:/xampp/htdocs/GCP Syndic Website v2/public\nos-metiers-location.html:455: <div id="imdw-footer" data-cid="38284" data-hash="T50JV-2MQX-PAAP0-M19H-4VLKWK" data-ctype="brand" data-theme="dark" data-background="white" data-enab
+c:/xampp/htdocs/GCP Syndic Website v2/public\nos-metiers-location.html:460: </div></div></div><div class="fusion-layout-column fusion_builder_column fusion-builder-column-14 fusion_builder_column_1_3 1_3 fusion-flex-column chi
+c:/xampp/htdocs/GCP Syndic Website v2/public\nos-metiers-location.html:559: <a href="/2025/02/05/voeux-2025-une-journee-de-star-au-studio-harcourt-paris/" aria-label="Vœux 2025 : Une journée de Star au Studio Harcourt Maroc">
+c:/xampp/htdocs/GCP Syndic Website v2/public\nos-metiers-location.html:567: <div class="fusion-post-content-wrapper" style="padding:10px 0 10px 0;"><div class="fusion-post-content post-content"><h2 class="blog-shortcode-post-t
+c:/xampp/htdocs/GCP Syndic Website v2/public\nos-metiers-syndic.html:475: <div id="imdw-footer" data-cid="38284" data-hash="T50JV-2MQX-PAAP0-M19H-4VLKWK" data-ctype="brand" data-theme="dark" data-background="white" data-enab
+c:/xampp/htdocs/GCP Syndic Website v2/public\nos-metiers-syndic.html:871: <a href="/2025/02/05/voeux-2025-une-journee-de-star-au-studio-harcourt-paris/" aria-label="Vœux 2025 : Une journée de Star au Studio Harcourt Maroc">
+c:/xampp/htdocs/GCP Syndic Website v2/public\nos-metiers-syndic.html:879: <div class="fusion-post-content-wrapper" style="padding:10px 0 10px 0;"><div class="fusion-post-content post-content"><h2 class="blog-shortcode-post-t
+c:/xampp/htdocs/GCP Syndic Website v2/public\nos-metiers-vente.html:455: <div id="imdw-footer" data-cid="38284" data-hash="T50JV-2MQX-PAAP0-M19H-4VLKWK" data-ctype="brand" data-theme="dark" data-background="white" data-enab
+c:/xampp/htdocs/GCP Syndic Website v2/public\nos-metiers-vente.html:592: </div></div></div><div class="fusion-layout-column fusion_builder_column fusion-builder-column-16 fusion_builder_column_1_3 1_3 fusion-flex-column chi
+c:/xampp/htdocs/GCP Syndic Website v2/public\nos-metiers-vente.html:692: <a href="/2025/02/05/voeux-2025-une-journee-de-star-au-studio-harcourt-paris/" aria-label="Vœux 2025 : Une journée de Star au Studio Harcourt Maroc">
+c:/xampp/htdocs/GCP Syndic Website v2/public\nos-metiers-vente.html:700: <div class="fusion-post-content-wrapper" style="padding:10px 0 10px 0;"><div class="fusion-post-content post-content"><h2 class="blog-shortcode-post-t
+c:/xampp/htdocs/GCP Syndic Website v2/public\notre-maison.html:567: Université PARIS II – Panthéon ASSAS</p>
+c:/xampp/htdocs/GCP Syndic Website v2/public\notre-maison.html:609: <p class="poste">Intègre le cabinet GCP Syndic en 2016 et dirige l’agence de PARIS 15ème depuis 2019.</p>
+c:/xampp/htdocs/GCP Syndic Website v2/public\assets\gcp-brand.css:212: img[src*="paris.svg"],
+c:/xampp/htdocs/GCP Syndic Website v2/public\assets\wp-content\plugins\formidable-pro\js\frm.min.js:168: return fieldRule.options.fpDateFormat}function operators(op,a,b){var theOperators;a=prepareLogicValueForComparison(a);b=prepareEnteredValueForComparis
+c:/xampp/htdocs/GCP Syndic Website v2/public\assets\wp-content\plugins\formidable-pro\js\frm.min.js:169: d);return d.includes(c)},["not LIKE"](c,d){if(!d)return true;c=prepareLogicValueForLikeComparison(c);d=prepareEnteredValueForLikeComparison(c,d);retur
+c:/xampp/htdocs/GCP Syndic Website v2/public\assets\wp-content\plugins\formidable-pro\js\frm.min.js:170: return d.substr(-c.length)===c}};if("function"!==typeof theOperators[op])op="==";return theOperators[op](a,b)}function prepareLogicValueForComparison(
+c:/xampp/htdocs/GCP Syndic Website v2/public\assets\wp-content\plugins\formidable-pro\js\frm.min.js:171: "number"&&typeof b==="string"&&shouldParseFloat(b))b=parseFloat(b);if(typeof b==="string")b=b.trim();return b}function prepareLogicValueForLikeCompari
+c:/xampp/htdocs/GCP Syndic Website v2/public\assets\wp-content\plugins\formidable-pro\js\frm.min.js:172: logicValue;break}}return enteredValue}function prepareValueForLikeComparison(val){if(typeof val==="string")val=val.toLowerCase();else if(typeof val===
+c:/xampp/htdocs/GCP Syndic Website v2/public\assets\wp-content\plugins\formidable-pro\js\frm.min.js:475: var factoryOutput=(()=>{var U=Object.defineProperty;var ht=Object.getOwnPropertyDescriptor;var pt=Object.getOwnPropertyNames;var Ct=Object.prototype.h
+c:/xampp/htdocs/GCP Syndic Website v2/public\assets\wp-content\themes\tps\prod\css-page\carte.css:107: #z_carte_paris {
+c:/xampp/htdocs/GCP Syndic Website v2/public\assets\wp-content\themes\tps\prod\css-page\carte.css:114: #z_carte_paris img {
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\inject_brand_master.py:334: # Replace all Paris/France references with Moroccan equivalents
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\inject_brand_master.py:336: ('Paris et la région parisienne', 'Meknès et les principales villes du Maroc'),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\inject_brand_master.py:337: ('la région parisienne', 'le Maroc'),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\inject_brand_master.py:338: ('Île-de-France', 'Maroc'),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\inject_brand_master.py:339: ("l'Île-de-France", 'le Maroc'),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\inject_brand_master.py:340: ('en Île-de-France', 'au Maroc'),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\inject_brand_master.py:342: ('France', 'Maroc'),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\inject_brand_master.py:343: ('française', 'marocaine'),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\inject_brand_master.py:344: ('français', 'marocain'),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\inject_brand_master.py:345: ('Paris', 'Meknès'),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\inject_brand_master.py:352: ('+33', '+212'),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:7: ("GCP Syndic Paris 8", "GCP Syndic Meknès"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:8: ("GCP Syndic Paris 15", "GCP Syndic Fès"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:9: ("GCP Syndic Paris 16", "GCP Syndic Rabat"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:10: ("GCP Syndic Paris 17", "GCP Syndic Casablanca"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:12: ("<h3>Paris 8</h3>", "<h3>Meknès</h3>"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:13: ("<h3>Paris 9</h3>", "<h3>Fès</h3>"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:14: ("<h3>Paris 11</h3>", "<h3>Kénitra</h3>"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:15: ("<h3>Paris 15</h3>", "<h3>Salé</h3>"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:16: ("<h3>Paris 16</h3>", "<h3>Rabat</h3>"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:17: ("<h3>Paris 17</h3>", "<h3>Casablanca</h3>"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:18: ("gcpsyndic-paris-viii", "gcpsyndic-meknes"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:19: ("gcpsyndic-paris-xv", "gcpsyndic-sale"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:20: ("gcpsyndic-paris-16", "gcpsyndic-rabat"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:21: ("gcpsyndic-paris-xvii", "gcpsyndic-casablanca"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:22: (">Paris<", ">Meknès<"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:23: ('"Paris"', '"Meknès"'),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:27: ("Cormeilles-en-Parisis", "Oujda"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:28: ("Top 5 des agences immobilières à Paris", "Top 5 des agences immobilières au Maroc"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:29: ("Studio Harcourt Paris", "Studio Harcourt Maroc"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:30: ("AgenceImmoParis", "AgenceImmoMaroc"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:31: ("sur Paris et l'Île-de-France", "sur Meknès et le Maroc"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:32: ("sur Paris et l'île de france", "sur Meknès et le Maroc"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:33: ("sur Paris et la région parisienne", "sur Meknès et le Maroc"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:34: ("Paris et la région parisienne", "Meknès et le Maroc"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:35: ("la région parisienne", "le Maroc"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:36: ("Paris", "Meknès"), # Catch all remaining Paris
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:37: ("France", "Maroc"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:38: ("français", "marocain"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:39: ("francais", "marocain"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:40: ("île de france", "Meknès"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:41: ("ile de france", "Meknès"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:42: ("ile-de-france", "Meknès"),
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\replace_france.py:55: # Ignore case for France / Paris catch-alls if needed, but doing exact match is safer first
+c:/xampp/htdocs/GCP Syndic Website v2/scratch\scan_france.py:5: terms = ["paris", "france", "français", "francais", "île de france", "ile de france", "ile-de-france", "+33"]

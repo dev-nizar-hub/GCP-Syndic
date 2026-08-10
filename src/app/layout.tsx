@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${poppins.variable} ${notoArabic.variable} h-full antialiased`} suppressHydrationWarning>
-      <body className="min-h-full flex flex-col bg-white text-gcp-dark">
+      <body className="min-h-full flex flex-col bg-white" style={{ color: '#0a2631' }}>
         <Header />
         <main className="flex-grow flex flex-col">
           {children}
