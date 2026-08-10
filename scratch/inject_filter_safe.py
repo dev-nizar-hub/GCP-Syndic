@@ -4,6 +4,7 @@ Never re-serializes the HTML, so the Avada CSS grid layout is preserved perfectl
 """
 import re
 import random
+import urllib.parse
 
 # ── City / dropdown data ────────────────────────────────────────────────────
 ACTIVE_CITIES = ["Meknès", "Kénitra", "Tanger", "Oujda"]
@@ -121,23 +122,23 @@ def inject(filepath, active_city_list):
         html = f.read()
 
     # ── 1. Replace city dropdown options ─────────────────────────────────
-    # The select has id="field_y68yj" — replace its content
+    # The select has id starting with "field_y68yj" — replace its content
     html = re.sub(
-        r'(<select[^>]*id="field_y68yj"[^>]*>)(.*?)(</select>)',
+        r'(<select[^>]*id="field_y68yj[^"]*"[^>]*>)(.*?)(</select>)',
         lambda m: m.group(1) + build_city_options() + m.group(3),
         html, flags=re.DOTALL
     )
 
     # ── 2. Replace type dropdown options ─────────────────────────────────
     html = re.sub(
-        r'(<select[^>]*id="field_um9ky"[^>]*>)(.*?)(</select>)',
+        r'(<select[^>]*id="field_um9ky[^"]*"[^>]*>)(.*?)(</select>)',
         lambda m: m.group(1) + build_type_options() + m.group(3),
         html, flags=re.DOTALL
     )
 
     # ── 3. Replace rooms dropdown options ─────────────────────────────────
     html = re.sub(
-        r'(<select[^>]*id="field_qfq1i"[^>]*>)(.*?)(</select>)',
+        r'(<select[^>]*id="field_qfq1i[^"]*"[^>]*>)(.*?)(</select>)',
         lambda m: m.group(1) + build_rooms_options() + m.group(3),
         html, flags=re.DOTALL
     )
@@ -182,6 +183,23 @@ def inject(filepath, active_city_list):
             r'<div class="fusion-layout-column[^>]*fusion-column-inner-bg-wrapper[^>]*>',
             patch_opening_tag, block, count=1
         )
+        
+        # Extract image URL to pass to the contact page
+        img_m = re.search(r'<img[^>]*src="([^"]+)"', block)
+        img_url = img_m.group(1) if img_m else ""
+        
+        # Construct the new WhatsApp inquiry link
+        params = []
+        if city: params.append(f"city={urllib.parse.quote(city)}")
+        if ptype: params.append(f"type={urllib.parse.quote(ptype)}")
+        if rooms: params.append(f"rooms={urllib.parse.quote(rooms)}")
+        if img_url: params.append(f"img={urllib.parse.quote(img_url)}")
+        
+        new_href = "/demande-bien.html" + ("?" + "&".join(params) if params else "")
+        
+        # Replace all links in this card to point to the new inquiry page
+        block = re.sub(r'href="[^"]*"', f'href="{new_href}"', block)
+        
         return block
 
     # Match each complete property column (they contain type_bien class)
