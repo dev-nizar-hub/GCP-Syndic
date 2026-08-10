@@ -92,8 +92,23 @@ function gcpRunFilter(btn){
   });
   if(visible===0){nr.classList.remove("gcp-hidden");nr.style.setProperty("display","block","important");}
 }
+
+// Make every property card fully clickable (not just the background image area)
+document.addEventListener("DOMContentLoaded", function(){
+  document.querySelectorAll(".gcp-pc[data-city]").forEach(function(card){
+    var anchor=card.querySelector("a.fusion-column-anchor");
+    if(anchor){
+      var href=anchor.getAttribute("href");
+      card.style.cursor="pointer";
+      card.addEventListener("click",function(e){
+        if(e.target.tagName==="A") return; // let real links work normally
+        window.location.href=href;
+      });
+    }
+  });
+});
 </script>
-<style>.gcp-hidden{display:none!important;}</style>"""
+<style>.gcp-hidden{display:none!important;}.gcp-pc[data-city]{cursor:pointer;}.gcp-pc[data-city]:hover{box-shadow:0 8px 24px rgba(0,32,91,0.18)!important;transform:translateY(-2px);transition:box-shadow 0.2s,transform 0.2s;}</style>"""
 
 
 def build_city_options():
