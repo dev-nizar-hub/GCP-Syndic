@@ -1248,6 +1248,44 @@ document.addEventListener("DOMContentLoaded", function(){
       });
     }
   });
+
+  // Auto-filter from URL parameter ?ville=CityName (set by map pins on the homepage)
+  var _params = new URLSearchParams(window.location.search);
+  var _villeParam = _params.get("ville");
+  if(_villeParam){
+    var _decodedVille = decodeURIComponent(_villeParam);
+    var _cityEl = document.querySelector('select[id^="field_y68yj"]');
+    if(_cityEl){
+      for(var _i=0;_i<_cityEl.options.length;_i++){
+        if(_cityEl.options[_i].value === _decodedVille){ _cityEl.value = _decodedVille; break; }
+      }
+    }
+    var _cards = document.querySelectorAll(".gcp-pc[data-city]");
+    var _GCP_ACTIVE = typeof GCP_ACTIVE_CITIES !== "undefined" ? GCP_ACTIVE_CITIES : [];
+    var _visible = 0;
+    _cards.forEach(function(card){
+      var cc = card.getAttribute("data-city") || "";
+      if(cc === _decodedVille){ _visible++; }
+      else{ card.classList.add("gcp-hidden"); card.style.setProperty("display","none","important"); }
+    });
+    if(_GCP_ACTIVE.length > 0 && _GCP_ACTIVE.indexOf(_decodedVille) === -1){
+      _cards.forEach(function(card){ card.classList.add("gcp-hidden"); card.style.setProperty("display","none","important"); });
+      if(typeof gcpGetOrCreateBanner === "function"){
+        var _bCss = "display:inline-block;background:#00205b;color:#fff;padding:14px 36px;border-radius:8px;text-decoration:none;font-weight:600;font-size:1rem;";
+        var _csHtml = "<div style='max-width:600px;margin:0 auto;background:linear-gradient(135deg,#f8f9ff,#e8f0fe);border-radius:16px;padding:60px 40px;box-shadow:0 8px 32px rgba(0,80,200,0.1);'><img src='/logo-transparent.png' style='height:120px;margin-bottom:24px;'/><h2 style='color:#00205b;font-size:2rem;margin-bottom:16px;'>Bient\u00f4t disponible</h2><p style='color:#555;font-size:1.1rem;line-height:1.7;margin-bottom:32px;'>GCP Syndic arrive bient\u00f4t dans <strong>"+_decodedVille+"</strong>\u00a0!</p><a href='/contact.html' style='"+_bCss+"'>Nous contacter</a></div>";
+        var _csEl = gcpGetOrCreateBanner("gcp-coming-soon", _csHtml);
+        _csEl.classList.remove("gcp-hidden"); _csEl.style.setProperty("display","block","important");
+      }
+    } else if(_visible === 0 && typeof gcpGetOrCreateBanner === "function"){
+      var _nrHtml = "<div style='max-width:500px;margin:0 auto;'><div style='font-size:48px;margin-bottom:16px;'>&#128269;</div><h3 style='color:#00205b;font-size:1.5rem;margin-bottom:12px;'>Aucun r\u00e9sultat trouv\u00e9</h3><p style='color:#777;font-size:1rem;'>Aucun bien ne correspond \u00e0 <strong>"+_decodedVille+"</strong> pour le moment.</p></div>";
+      var _nrEl = gcpGetOrCreateBanner("gcp-no-results", _nrHtml);
+      _nrEl.classList.remove("gcp-hidden"); _nrEl.style.setProperty("display","block","important");
+    }
+    setTimeout(function(){
+      var _section = document.querySelector(".gcp-pc[data-city]");
+      if(_section) _section.scrollIntoView({behavior:"smooth", block:"start"});
+    }, 300);
+  }
 });
 </script>
 <style>.gcp-hidden{display:none!important;}.gcp-pc[data-city]{cursor:pointer;}.gcp-pc[data-city]:hover{box-shadow:0 8px 24px rgba(0,32,91,0.18)!important;transform:translateY(-2px);transition:box-shadow 0.2s,transform 0.2s;}</style>
