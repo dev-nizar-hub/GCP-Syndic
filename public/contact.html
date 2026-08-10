@@ -352,13 +352,13 @@ function toggleMobileMenu(btn){
       <p>Nous vous repondrons dans les plus brefs delais.</p>
       <form id="contactForm" onsubmit="handleSubmit(event)">
         <div class="input-row">
-          <div class="form-group"><input type="email" placeholder="Adresse email *" required/></div>
-          <div class="form-group"><input type="tel" placeholder="Telephone"/></div>
+          <div class="form-group"><input type="email" name="email" placeholder="Adresse email *" required/></div>
+          <div class="form-group"><input type="tel" name="phone" placeholder="Telephone"/></div>
         </div>
-        <div class="form-group"><input type="text" placeholder="Nom complet *" required/></div>
-        <div class="form-group"><input type="text" placeholder="Objet de votre demande"/></div>
-        <div class="form-group"><textarea placeholder="Votre message *" required></textarea></div>
-        <button type="submit" class="btn-primary">Envoyer le message &#x27A4;</button>
+        <div class="form-group"><input type="text" name="name" placeholder="Nom complet *" required/></div>
+        <div class="form-group"><input type="text" name="subject" placeholder="Objet de votre demande"/></div>
+        <div class="form-group"><textarea name="message" placeholder="Votre message *" required></textarea></div>
+        <button type="submit" class="btn-primary" id="submitBtn">Envoyer le message &#x27A4;</button>
       </form>
     </div>
 
@@ -441,10 +441,47 @@ function toggleMobileMenu(btn){
 <script>
 function handleSubmit(e) {
   e.preventDefault();
+  
+  var form = e.target;
+  var btn = document.getElementById('submitBtn');
   var toast = document.getElementById('toast');
-  toast.style.display = 'block';
-  e.target.reset();
-  setTimeout(function(){ toast.style.display = 'none'; }, 4000);
+  var originalBtnText = btn.innerHTML;
+  
+  // Loading state
+  btn.innerHTML = 'Envoi en cours...';
+  btn.disabled = true;
+
+  var formData = new FormData(form);
+
+  fetch('send_mail.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    btn.innerHTML = originalBtnText;
+    btn.disabled = false;
+    
+    if (data.status === 'success') {
+      toast.innerText = 'Votre message a été envoyé avec succès !';
+      toast.style.backgroundColor = '#16a34a';
+      toast.style.display = 'block';
+      form.reset();
+    } else {
+      toast.innerText = 'Erreur lors de l\\'envoi. Veuillez réessayer.';
+      toast.style.backgroundColor = '#dc2626';
+      toast.style.display = 'block';
+    }
+    setTimeout(function(){ toast.style.display = 'none'; }, 4000);
+  })
+  .catch(error => {
+    btn.innerHTML = originalBtnText;
+    btn.disabled = false;
+    toast.innerText = 'Une erreur s\\'est produite.';
+    toast.style.backgroundColor = '#dc2626';
+    toast.style.display = 'block';
+    setTimeout(function(){ toast.style.display = 'none'; }, 4000);
+  });
 }
 </script>
 
